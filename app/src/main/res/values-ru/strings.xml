@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_activity_login">CurrConv-Вход</string>
+    <string name="title_activity_main">CurrConv-Основной</string>
+    <string name="title_fragment_converter">Конвертер</string>
+    <string name="title_fragment_operations">Операции</string>
+
+    <!-- Menu -->
+    <string name="action_about">О приложении</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_logout">Выход</string>
+    <string name="action_settings_login_en">Английский</string>
+    <string name="action_settings_login_ru">Русский</string>
+
+    <!-- Login activity -->
+    <string name="regLoginText">Войдите, используя аккаунт одной из Ваших соц.сетей:</string>
+    <string name="unregLoginText">Вход без регистрации:</string>
+
+    <string name="vksignin">"Вход через VK "</string>
+    <string name="fbsignin">"Вход через Facebook "</string>
+    <string name="gooplussignin">"Вход через Google+ "</string>
+
+    <string name="guestlogin">"Гостевой вход "</string>
+    <string name="user1login">"User1 "</string>
+    <string name="user2login">"User2 "</string>
+
+    <string name="vk_init_failed">Сбой регистрации в VK</string>
+
+<!-- About activity -->
+    <string name="title_about">О приложении</string>
+    <string name="aboutText">
+        Это небольшой многопользовательский конвертер валют.\n
+        Поддерживается авторизация пользователя через аккаунты в соц. сетях (Google+, FaceBook, VK).\n
+        Возможна работа без регистрации, в гостевом режиме.\n
+        Конверсия 168 мировых валют выполняется как он-лайн, так и без подключения к интернету\n
+        (в этом случае используются сохранённые локально курсы валют).\n
+        Список текущих операций пользователя сохраняется и может просматриваться и редактироваться\n
+        им в следующей сессии.
+    </string>
+
+<!-- Main activity - Converter tab -->
+    <string name="textviewHeaderFrom">Из</string>
+    <string name="textviewHeaderTo">"В "</string>
+    <string name="buttonSwap">Переставить</string>
+    <string name="buttonConvert">Конвертировать</string>
+    <string name="buttonRefresh">Обновить</string>
+
+    <string name="tvRatesRefreshDate">"Дата последнего обновления: "</string>
+    <string name="tvRatesRefreshDateEnding">назад</string>
+    <string name="tvRatesRefreshDateNeverValue">никогда. \nНажмите \'Обновить\'..</string>
+    <string name="tvRatesRefreshDateAbbrevD">"д "</string>
+    <string name="tvRatesRefreshDateAbbrevH">"ч "</string>
+    <string name="tvRatesRefreshDateAbbrevM">"м "</string>
+
+    <string name="dlgRefreshingExchangeRates">Запрос курсов валют...</string>
+    <string name="dlgNetworkFailedTitle">Ошибка соединения с сетью</string>
+    <string name="dlgNetworkFailedMessage">Невозможно обновить курсы валют, будут использоваться сохранённые ранее.</string>
+
+<!-- Main activity - Operations tab -->
+    <string name="textviewHeaderOps">История операций пользователя</string>
+    <string name="toastSwipeHoriz">Cвайп ←→ для удаления записи..</string>
+    <string name="buttonClearAll">Очистить ВСЁ</string>
+
+</resources>

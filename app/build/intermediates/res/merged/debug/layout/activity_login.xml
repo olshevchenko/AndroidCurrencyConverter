@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/activity_horizontal_margin"
+              tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tvRegLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/regLoginText"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btVKsignin"
+        style="@style/CustomButton"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_vk"
+        android:background="@color/bt_vk_login_background"
+        android:text="@string/vksignin"/>
+
+    <Button
+        android:id="@+id/btFBsignin"
+        style="@style/CustomButton"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_fb"
+        android:background="@color/bt_fb_login_background"
+        android:text="@string/fbsignin"/>
+
+    <Button
+        android:id="@+id/btGooglePlussignin"
+        style="@style/CustomButton"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_googleplus"
+        android:background="@color/bt_googleplus_login_background"
+        android:text="@string/gooplussignin"/>
+
+    <View
+        android:layout_marginTop="20dp"
+        style="@style/HDividerView"/>
+
+    <TextView
+        android:id="@+id/tvUnregLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/unregLoginText"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btGuestlogin"
+        style="@style/CustomButton"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_guest"
+        android:background="@color/bt_gest_login_background"
+        android:text="@string/guestlogin"/>
+
+    <Button
+        android:id="@+id/btUser1login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/user1login"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btUser2login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="user2login"
+        android:padding="10dp"
+        android:text="@string/user2login"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/layout/activity_login.xml -->

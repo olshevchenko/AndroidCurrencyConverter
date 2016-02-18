@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="et_conv_background">#36393d</color>
+    <color name="bt_conv_text">#f582aaea</color>
+    <color name="v_conv_divider">#4682aaea</color>
+
+    <color name="bt_vk_login_background">#4770a2</color>
+    <color name="bt_fb_login_background">#38569c</color>
+    <color name="bt_googleplus_login_background">#d13c21</color>
+    <color name="bt_ok_login_background">#f88200</color>
+    <color name="bt_tw_login_background">#00abf0</color>
+    <color name="bt_gest_login_background">#1a857d</color>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CurrConv</string>
+
+    <string name="shared_pref_fname">MyPref</string>
+
+    <string name="title_activity_login">CurrConv-Login</string>
+    <string name="title_activity_main">CurrConv-Main</string>
+    <string name="title_fragment_converter">Converter</string>
+    <string name="title_fragment_operations">Operations</string>
+
+    <!-- Menu -->
+    <string name="action_about">About</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_settings_login_en">English</string>
+    <string name="action_settings_login_ru">Russian</string>
+
+<!-- Login activity -->
+
+    <!-- VK APP ID -->
+    <integer name="com_vk_sdk_AppId">5235919</integer>
+
+    <string name="regLoginText">Please sign in with the one of your social accounts:</string>
+    <string name="unregLoginText">Unregistered login:</string>
+
+    <string name="vksignin">"Sign in with VK "</string>
+    <string name="fbsignin">"Sign in with Facebook "</string>
+    <string name="gooplussignin">"Sign in with Google+ "</string>
+
+    <string name="guestlogin">"Guest login "</string>
+    <string name="user1login">"User1 login "</string>
+    <string name="user2login">"User2 login "</string>
+
+    <string name="vk_init_failed">VK initialization failed</string>
+    <string name="vk_login_failed">VK login failed</string>
+    <string name="vk_login_succeeded">VK login succeeded</string>
+<!-- About activity -->
+    <string name="title_about">About</string>
+    <string name="aboutText">
+        Here is a small multi-user currency converter application.\n
+        It supports user authorization through simple google account as well as google+ social networking.\n
+        Also, guest-mode session is allowed.\n
+        Conversion for 168 world currencies is executed both in online- and offline-mode (last remembered exchange rates are used).\n
+        List of current exchange operations is stored and can be reviewed next time.
+    </string>
+
+<!-- Main activity - Converter tab -->
+    <string name="textviewHeaderFrom">From</string>
+    <string name="textviewHeaderTo">" To "</string>
+    <string name="buttonSwap">Invert</string>
+    <string name="buttonConvert">Convert</string>
+    <string name="buttonRefresh">Refresh</string>
+
+    <string name="tvRatesRefreshDate">"Rates last update: "</string>
+    <string name="tvRatesRefreshDateEnding">ago</string>
+    <string name="tvRatesRefreshDateNeverValue">never. Hit \'Refresh\', please..</string>
+    <string name="tvRatesRefreshDateAbbrevD">"d "</string>
+    <string name="tvRatesRefreshDateAbbrevH">"h "</string>
+    <string name="tvRatesRefreshDateAbbrevM">"m "</string>
+
+    <string name="dlgRefreshingExchangeRates">Requesting exchange rates...</string>
+    <string name="dlgNetworkFailedTitle">Network connection failed</string>
+    <string name="dlgNetworkFailedMessage">Unable to refresh currency rates, will use locally stored values.</string>
+
+<!-- Main activity - Operations tab -->
+    <string name="textviewHeaderOps">User operations history</string>
+    <string name="toastSwipeHoriz">Swipe horizontally ←→ to remove record..</string>
+    <string name="buttonClearAll">Clear ALL</string>
+
+</resources>
