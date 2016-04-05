@@ -11,7 +11,9 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,11 +29,12 @@ import com.example.ol.currconverter.db.OperationData;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit.RetrofitError;
 
 
-public class ConverterFragment extends MainActivity.PlaceholderFragment {
+public class ConverterFragment extends Fragment {
 
   //for logging
   private static final String LOG_TAG = ConverterFragment.class.getName();
@@ -180,6 +183,7 @@ public class ConverterFragment extends MainActivity.PlaceholderFragment {
       }
     });
 
+    /// Currencies swap
     Button btInvert = (Button) rootView.findViewById(R.id.btInvert);
     btInvert.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
@@ -195,13 +199,15 @@ public class ConverterFragment extends MainActivity.PlaceholderFragment {
   //Amounts UI block
     final EditText etAmountFrom = (EditText) rootView.findViewById(R.id.etAmountFrom);
     final EditText etAmountTo = (EditText) rootView.findViewById(R.id.etAmountTo);
+
+    /// Currencies amounts conversion
     Button btConvert = (Button) rootView.findViewById(R.id.btConvert);
     btConvert.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
         if (TextUtils.isEmpty(etAmountFrom.getText().toString())) {
           return;
         }
-        Log.d(LOG_TAG, "Converting currency amounts...");
+//        Log.d(LOG_TAG, "Converting currencies...");
         double amountFrom = Float.parseFloat(etAmountFrom.getText().toString());
         mySession.getOpConvertion().setFromAmount(amountFrom);
         double amountTo = mySession.onConvert();

@@ -34,7 +34,6 @@ public class OperationsHelper {
       } catch (Exception e) {
         Log.w(LOG_TAG, "While adding operation to the operations list:" + e);
       } //just skip this element
-      return;
     }
 
     public void deleteItem(int position) {
@@ -43,7 +42,6 @@ public class OperationsHelper {
       } catch (Exception e) {
         Log.w(LOG_TAG, "While removing operation from the operations list:" + e);
       } //just skip this element
-      return;
     }
 
     public List<OperationData> getList() {
@@ -91,7 +89,7 @@ public class OperationsHelper {
     Set<String> currencies = new LinkedHashSet<String>();
 
     for (OperationData op: opsDBUser.getList()) {
-      if (op.isLastSession() == true) {
+      if (op.isLastSession()) {
         //add currencies from the LAST session operations only
         currencies.add(op.getFromCurrency());
         currencies.add(op.getToCurrency());
@@ -151,7 +149,7 @@ public class OperationsHelper {
     }
 
     OperationData item = opsDBUser.getList().get(position);
-    if (true == isDBDeleteNow) {
+    if (isDBDeleteNow) {
       // delete data objects in the database
       try {
         if (null != operationDataDao)
@@ -166,7 +164,6 @@ public class OperationsHelper {
 
     //remove item from the list
     opsDBUser.deleteItem(position);
-    return;
   }
 
   /**
@@ -203,22 +200,26 @@ public class OperationsHelper {
     }
     opsDeleted.clearList();
 
-    //disable 'isLastSession' sign from remaining user's operation DB records
-    for (OperationData item : opsDBUser.getList()) {
-      if (item.isLastSession() == false)
-        continue;
-      //will update 'last-session' records only
-      item.setIsLastSession(false);
-      try {
-        if (null != operationDataDao)
-          operationDataDao.update(item); //update corresponding DB records
-        else
-          ; //ignore update
-      } catch (SQLException e) {
-        Log.w(LOG_TAG, "Failed to update operation DB item: " + item);
+    if (opsCurrentSession.getList().size() > 0) {
+      /// disable 'isLastSession' sign from remaining user's operation DB records
+      for (OperationData item : opsDBUser.getList()) {
+        if (! item.isLastSession())
+          continue;
+        //will update 'last-session' records only
+        item.setIsLastSession(false);
+        try {
+          if (null != operationDataDao)
+            operationDataDao.update(item); //update corresponding DB records
+          else
+            ; //ignore update
+        } catch (SQLException e) {
+          Log.w(LOG_TAG, "Failed to update operation DB item: " + item);
+        }
       }
-    }
-    opsDBUser.clearList();
+    } else
+      ; /// if current session is EMPTY, remain old DB records as 'LastSession'-signed ones
+
+    opsDBUser.clearList(); /// clear the whole ops list
 
     //store all current session operations into DB
     for (OperationData item : opsCurrentSession.getList()) {

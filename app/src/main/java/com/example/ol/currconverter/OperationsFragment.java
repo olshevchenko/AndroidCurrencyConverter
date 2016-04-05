@@ -5,7 +5,7 @@
 package com.example.ol.currconverter;
 
 import android.os.Bundle;
-import android.os.Parcelable;
+import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -15,18 +15,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ol.currconverter.db.OperationData;
 
-import java.util.List;
-
-public class OperationsFragment extends MainActivity.PlaceholderFragment {
+public class OperationsFragment extends Fragment {
   //for logging
   private static final String LOG_TAG = OperationsFragment.class.getName();
 
@@ -137,7 +131,7 @@ public class OperationsFragment extends MainActivity.PlaceholderFragment {
     final GestureDetector gestureDetector = new GestureDetector(new MyGestureListener(lvUserOpsHistory));
 
     // (re)set OnItemLongClickListener
-    if (true == lvUOHIsOnTouchListenerSet)
+    if (lvUOHIsOnTouchListenerSet)
       ;
     else {
       lvUserOpsHistory.setOnTouchListener(new View.OnTouchListener() {

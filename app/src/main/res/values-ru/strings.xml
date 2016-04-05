@@ -39,6 +39,15 @@
         им в следующей сессии.
     </string>
 
+    <!-- Main activity - Fragment navigation drawer -->
+    <string name="drawer_open">Открыть шторку</string>
+    <string name="drawer_close">Закрыть шторку</string>
+
+    <string-array name="fragment_titles">
+        <item>Конвертер</item>
+        <item>Операции</item>
+    </string-array>
+
 <!-- Main activity - Converter tab -->
     <string name="textviewHeaderFrom">Из</string>
     <string name="textviewHeaderTo">"В "</string>

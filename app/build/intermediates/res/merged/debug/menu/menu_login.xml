@@ -25,5 +25,10 @@
             android:icon="@drawable/ic_info_white_36dp"
             app:showAsAction="always"
             android:orderInCategory="2"/>
+      <item android:id="@+id/action_logout"
+            android:title="@string/action_logout"
+            android:icon="@drawable/ic_cancel_white_36dp"
+            app:showAsAction="always"
+            android:orderInCategory="3"/>
 </menu>
 <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/menu/menu_login.xml -->

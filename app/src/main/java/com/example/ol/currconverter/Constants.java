@@ -10,6 +10,7 @@ public final class Constants {
   }
 
   public class SocAppsIDs {
+    public static final String VKAppIdPrefix = "vk.com/id";
   }
 
 

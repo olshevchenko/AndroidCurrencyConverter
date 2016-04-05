@@ -1,7 +1,6 @@
 package com.example.ol.currconverter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Gravity;
@@ -27,8 +26,10 @@ public class SocNetHelper {
   private static short bitFBInited = 2; /// for FB one
   private static short bitGPInited = 4; /// for Google+
 
+  private static String[] vkScope = new String[] {}; /// no permissions for VK - just signing through
+
   private static Activity activity;
-  private static String[] vkScope = new String[] {};
+  private String userID; /// ID for using as User's one for application session
 
   private SocNetHelper() {
   }
@@ -38,6 +39,10 @@ public class SocNetHelper {
       throw new RuntimeException("nulled SocNetHelper");
     }
     return snHelper;
+  }
+
+  public String getUserID() {
+    return userID;
   }
 
   /**
@@ -52,14 +57,13 @@ public class SocNetHelper {
 //      snInitStatus |= bitVKInited | bitFBInited | bitGPInited; //let all succeeded
       snInitStatus |= bitVKInited;
       try {
-        ;
 //        VKSdk.initialize(activity.getApplicationContext());
-//ToDo !remove artificial exception!
-//        throw new RuntimeException("VKSdk.initialize failed");
       } catch (RuntimeException re) {
         Log.w(LOG_TAG, "FAILED to initialize VK SDK", re);
         snInitStatus &= ~bitVKInited; //set VK bit back to 0
       }
+      ; /// try to init FB here...
+      ; /// same as G+
     }
   }
 
@@ -84,10 +88,8 @@ public class SocNetHelper {
       @Override
       public void onResult(VKAccessToken res) {
 // Пользователь успешно авторизовался
-        Log.i(LOG_TAG, "VK login succeeded");
-        Toast toast = Toast.makeText(activity, R.string.vk_login_succeeded, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+        userID = Constants.SocAppsIDs.VKAppIdPrefix + res.userId;
+        Log.i(LOG_TAG, "VK login succeeded, userID:" + userID);
       }
       @Override
       public void onError(VKError error) {

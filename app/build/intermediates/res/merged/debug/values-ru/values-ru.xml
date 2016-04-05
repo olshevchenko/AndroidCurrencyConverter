@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/values-ru/strings.xml -->
+    <eat-comment/>
+    <string-array name="fragment_titles">
+        <item>Конвертер</item>
+        <item>Операции</item>
+    </string-array>
     <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-ru/values.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Перейти на главный экран"</string>
@@ -40,6 +46,8 @@
     <string name="dlgNetworkFailedMessage">Невозможно обновить курсы валют, будут использоваться сохранённые ранее.</string>
     <string name="dlgNetworkFailedTitle">Ошибка соединения с сетью</string>
     <string name="dlgRefreshingExchangeRates">Запрос курсов валют...</string>
+    <string name="drawer_close">Закрыть шторку</string>
+    <string name="drawer_open">Открыть шторку</string>
     <string name="fbsignin">"Вход через Facebook "</string>
     <string name="gooplussignin">"Вход через Google+ "</string>
     <string name="guestlogin">"Гостевой вход "</string>
@@ -62,13 +70,13 @@
     <string name="unregLoginText">Вход без регистрации:</string>
     <string name="user1login">"User1 "</string>
     <string name="user2login">"User2 "</string>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="vk_enter_captcha_text">Введите текст с картинки</string>
     <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/values-ru/strings.xml -->
     <eat-comment/>
     <string name="vk_init_failed">Сбой регистрации в VK</string>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values-ru/values-ru.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values-ru/values-ru.xml -->
     <eat-comment/>
     <string name="vk_name">ВКонтакте</string>
     <string name="vk_new_message_text">Введите текст сообщения..</string>

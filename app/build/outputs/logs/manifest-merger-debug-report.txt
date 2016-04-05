@@ -21,7 +21,7 @@ application
 ADDED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml:5:5-43:19
 MERGED from [com.android.support:appcompat-v7:21.0.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:support-v4:23.0.0] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:11:5-27:19
+MERGED from [com.vk:androidsdk:1.6.6] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/AndroidManifest.xml:11:5-27:19
 MERGED from [com.android.support:support-v4:23.0.0] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml:9:9-41
@@ -35,7 +35,7 @@ MERGED from [com.android.support:support-v4:23.0.0] /home/ol/AndroidStudioProjec
 		ADDED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml:6:9-36
 activity#com.vk.sdk.VKServiceActivity
 ADDED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml:11:9-14:53
-MERGED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:12:9-15:53
+MERGED from [com.vk:androidsdk:1.6.6] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/AndroidManifest.xml:12:9-15:53
 	android:label
 		ADDED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml:13:13-44
 	android:theme
@@ -98,7 +98,7 @@ uses-sdk
 INJECTED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:21.0.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/AndroidManifest.xml:15:5-42
 MERGED from [com.android.support:support-v4:23.0.0] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
-MERGED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.vk:androidsdk:1.6.6] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:23.0.0] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml
@@ -106,21 +106,3 @@ MERGED from [com.android.support:support-v4:23.0.0] /home/ol/AndroidStudioProjec
 	android:minSdkVersion
 		INJECTED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml
 		INJECTED from /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/AndroidManifest.xml
-receiver#com.vk.sdk.payments.VKPaymentsReceiver
-ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:17:9-26:20
-	android:exported
-		ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:19:13-36
-	android:name
-		ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:18:13-66
-intent-filter#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:20:13-22:29
-action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:21:17-79
-	android:name
-		ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:21:25-76
-intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:23:13-25:29
-action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:24:17-79
-	android:name
-		ADDED from [com.vk:androidsdk:1.6.3] /home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/AndroidManifest.xml:24:25-76

@@ -41,4 +41,4 @@
         android:imeOptions="actionSend"
         android:inputType="textFilter|textNoSuggestions|textVisiblePassword"/>
 </RelativeLayout>
-<!-- From: file:/Users/romantruba/Documents/projects/vk-android-sdk/vksdk_library/src/main/res/layout/vk_captcha_dialog.xml --><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/layout/vk_captcha_dialog.xml -->
+<!-- From: file:/Users/romantruba/Documents/projects/vk-android-sdk/vksdk_library/src/main/res/layout/vk_captcha_dialog.xml --><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/layout/vk_captcha_dialog.xml -->

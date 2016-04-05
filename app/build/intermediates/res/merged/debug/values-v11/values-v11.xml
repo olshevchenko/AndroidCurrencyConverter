@@ -354,7 +354,7 @@
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
     </style>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values-v11/values-v11.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="VK.Transparent" parent="android:Theme.Holo.Light">
         <item name="android:windowIsTranslucent">true</item>

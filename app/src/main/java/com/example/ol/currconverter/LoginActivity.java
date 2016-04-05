@@ -18,7 +18,6 @@ import android.widget.TextView;
 
 import com.example.ol.currconverter.db.DBHelper;
 import com.example.ol.currconverter.http.CurrencyLayerAPI;
-import com.vk.sdk.VKSdk;
 
 import java.util.Locale;
 
@@ -72,9 +71,11 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     btnVKLogin.setOnClickListener(this);
 
     btnFBLogin = (Button) findViewById(R.id.btFBsignin);
+    btnFBLogin.setEnabled(false);
     btnFBLogin.setOnClickListener(this);
 
     btnGooglePlusLogin = (Button) findViewById(R.id.btGooglePlussignin);
+    btnGooglePlusLogin.setEnabled(false);
     btnGooglePlusLogin.setOnClickListener(this);
 
 
@@ -83,9 +84,11 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     btnGuestLogin.setOnClickListener(this);
 
     btnUser1Login = (Button) findViewById(R.id.btUser1login);
+    btnUser1Login.setEnabled(false);
     btnUser1Login.setOnClickListener(this);
 
     btnUser2Login = (Button) findViewById(R.id.btUser2login);
+    btnUser2Login.setEnabled(false);
     btnUser2Login.setOnClickListener(this);
 
     setLocale(loadLangData());
@@ -134,8 +137,10 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    if (SocNetHelper.getHelper().onActivityResult(requestCode, resultCode, data))
-      ;
+    if (SocNetHelper.getHelper().onActivityResult(requestCode, resultCode, data)) {
+      saveUserData(SocNetHelper.getHelper().getUserID());
+      startMain();
+    }
     else
       super.onActivityResult(requestCode, resultCode, data);
   }
@@ -145,7 +150,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     switch (v.getId()) {
       case R.id.btVKsignin:
         SocNetHelper.getHelper().loginVK();
-//        saveUserData("Guest");
         break;
       case R.id.btFBsignin:
         saveUserData("Guest");
@@ -182,14 +186,14 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
     ///update corresponding 'set' item state
     String lang = loadLangData();
-    if (true == lang.equals(Constants.Languages.ENG)) {
+    if (lang.equals(Constants.Languages.ENG)) {
       MenuItem item = menu.findItem(R.id.action_settings_login_en);
       if (null != item)
         item.setChecked(true);
       else
         ; //just ignore 'en' menu language setting
     }
-    if (lang.equals(Constants.Languages.RUS) == true) {
+    if (lang.equals(Constants.Languages.RUS)) {
       MenuItem item = menu.findItem(R.id.action_settings_login_ru);
       if (null != item)
         item.setChecked(true);
@@ -233,6 +237,9 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         setLocale(Constants.Languages.RUS);
         updateLanguage(); ///ToDo - remove it after fixing the problem of non-calling onConfigurationChanged()
         return true;
+      case R.id.action_logout:
+        finish();
+        return true;
       default:
         return super.onOptionsItemSelected(item);
     } //switch
@@ -260,7 +267,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
   private void setLocale(String loc) {
     ///compare new locale with the default one - may be no needs to reset language
-    if (true == loc.equals(Locale.getDefault().toString()))
+    if (loc.equals(Locale.getDefault().toString()))
       return;
     Log.i(LOG_TAG, "OL-DBG: LoginActivity.setLocale() - changing locale to " + loc);
     Locale myLocale = new Locale(loc);

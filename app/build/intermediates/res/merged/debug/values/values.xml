@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="fragment_titles">
+        <item>Converter</item>
+        <item>Operations</item>
+    </string-array>
     <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -80,7 +86,7 @@
     <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="v_conv_divider">#4682aaea</color>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values/values.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values/values.xml -->
     <eat-comment/>
     <color name="vk_black">#000</color>
     <color name="vk_black_pressed">#1000</color>
@@ -168,7 +174,7 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values/values.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values/values.xml -->
     <eat-comment/>
     <dimen name="vk_share_dialog_padding">10dp</dimen>
     <dimen name="vk_share_dialog_padding_top">6dp</dimen>
@@ -240,6 +246,8 @@
     <string name="dlgNetworkFailedMessage">Unable to refresh currency rates, will use locally stored values.</string>
     <string name="dlgNetworkFailedTitle">Network connection failed</string>
     <string name="dlgRefreshingExchangeRates">Requesting exchange rates...</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="drawer_open">Open drawer</string>
     <string name="fbsignin">"Sign in with Facebook "</string>
     <string name="gooplussignin">"Sign in with Google+ "</string>
     <string name="guestlogin">"Guest login "</string>
@@ -263,7 +271,7 @@
     <string name="unregLoginText">Unregistered login:</string>
     <string name="user1login">"User1 login "</string>
     <string name="user2login">"User2 login "</string>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values/values.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values/values.xml -->
     <eat-comment/>
     <string name="vk_enter_captcha_text">Enter captcha text here</string>
     <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/values/strings.xml -->
@@ -271,7 +279,7 @@
     <string name="vk_init_failed">VK initialization failed</string>
     <string name="vk_login_failed">VK login failed</string>
     <string name="vk_login_succeeded">VK login succeeded</string>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values/values.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values/values.xml -->
     <eat-comment/>
     <string name="vk_name">VK</string>
     <string name="vk_new_message_text">Enter your message..</string>
@@ -1305,7 +1313,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/v_conv_divider</item>
     </style>
-    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.3/res/values/values.xml -->
+    <!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/values/values.xml -->
     <eat-comment/>
     <style name="VK.Transparent" parent="android:Theme">
         <item name="android:windowIsTranslucent">true</item>

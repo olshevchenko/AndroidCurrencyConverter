@@ -1,7 +1,25 @@
-<com.example.ol.currconverter.NonSwipeableViewPager
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pager"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+    <ListView
+        android:id="@+id/drawer"
+        style="@style/TransparentExpandableListView"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="1dp"
+        android:background="@drawable/vertical_cloth_transp50"
+    />
+</android.support.v4.widget.DrawerLayout>
