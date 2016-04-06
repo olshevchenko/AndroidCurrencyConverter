@@ -3,7 +3,6 @@ package com.example.ol.currconverter;
  * Created by oshevchenk on 25.06.2015.
  */
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -13,7 +12,6 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -29,7 +27,6 @@ import com.example.ol.currconverter.db.OperationData;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import retrofit.RetrofitError;
 
@@ -202,18 +199,21 @@ public class ConverterFragment extends Fragment {
 
     /// Currencies amounts conversion
     Button btConvert = (Button) rootView.findViewById(R.id.btConvert);
+    btConvert.setEnabled(false); /// hide it at 1'st
     btConvert.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
         if (TextUtils.isEmpty(etAmountFrom.getText().toString())) {
           return;
         }
 //        Log.d(LOG_TAG, "Converting currencies...");
-        double amountFrom = Float.parseFloat(etAmountFrom.getText().toString());
-        mySession.getOpConvertion().setFromAmount(amountFrom);
         double amountTo = mySession.onConvert();
         etAmountTo.setText(OperationData.getAmountDecimalFormatter().format(amountTo));
       }
     });
+
+    /// textWatcher to hide/show btConvert + to format etAmountFrom
+    NumberTextWatcher textWatcher = new NumberTextWatcher(etAmountFrom, btConvert, mySession);
+    etAmountFrom.addTextChangedListener(textWatcher);
 
   //-----------------------------
   //"Rates refresh Date" UI block
@@ -233,14 +233,6 @@ public class ConverterFragment extends Fragment {
     });
 
     return rootView;
-  }
-
-  @Override
-  public void onAttach(Activity activity) {
-    super.onAttach(activity);
-
-//    Toast.makeText(getActivity(), LOG_TAG + "onAttach()", Toast.LENGTH_SHORT).show();
-    Log.i(LOG_TAG, "onAttach()");
   }
 
   @Override

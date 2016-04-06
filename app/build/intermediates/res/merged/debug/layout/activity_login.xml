@@ -63,22 +63,4 @@
         android:background="@color/bt_gest_login_background"
         android:text="@string/guestlogin"/>
 
-    <Button
-        android:id="@+id/btUser1login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="@string/user1login"
-        android:textSize="16dp"
-        android:layout_gravity="center_horizontal"/>
-
-    <Button
-        android:id="@+id/btUser2login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="user2login"
-        android:padding="10dp"
-        android:text="@string/user2login"
-        android:textSize="16dp"
-        android:layout_gravity="center_horizontal"/>
 </LinearLayout><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/layout/activity_login.xml -->

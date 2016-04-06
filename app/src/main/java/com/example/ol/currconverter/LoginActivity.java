@@ -28,7 +28,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
   private TextView tvRegLogin, tvUnregLogin;
 
   private Button btnVKLogin, btnFBLogin, btnGooglePlusLogin;
-  private Button btnGuestLogin, btnUser1Login, btnUser2Login;
+  private Button btnGuestLogin;
   private ActionBar actionBar;
 
   //for logging
@@ -82,14 +82,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 //ToDo Remove Users buttons after social networks authority implementations
     btnGuestLogin = (Button) findViewById(R.id.btGuestlogin);
     btnGuestLogin.setOnClickListener(this);
-
-    btnUser1Login = (Button) findViewById(R.id.btUser1login);
-    btnUser1Login.setEnabled(false);
-    btnUser1Login.setOnClickListener(this);
-
-    btnUser2Login = (Button) findViewById(R.id.btUser2login);
-    btnUser2Login.setEnabled(false);
-    btnUser2Login.setOnClickListener(this);
 
     setLocale(loadLangData());
     updateLanguage(); ///ToDo - remove it after fixing the problem of non-calling onConfigurationChanged()
@@ -156,14 +148,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         break;
       case R.id.btGooglePlussignin:
         saveUserData("Guest");
-        break;
-      case R.id.btUser1login:
-        saveUserData("User1");
-        startMain();
-        break;
-      case R.id.btUser2login:
-        saveUserData("User2");
-        startMain();
         break;
       case R.id.btGuestlogin:
       default:
@@ -294,9 +278,5 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     btnFBLogin.setText(R.string.fbsignin);
     btnGooglePlusLogin.setText(R.string.gooplussignin);
     btnGuestLogin.setText(R.string.guestlogin);
-    btnUser1Login.setText(R.string.user1login);
-    btnUser2Login.setText(R.string.user2login);
   }
-
-
 }

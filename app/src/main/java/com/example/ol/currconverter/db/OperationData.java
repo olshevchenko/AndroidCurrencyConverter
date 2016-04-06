@@ -6,6 +6,7 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -47,8 +48,18 @@ public class OperationData implements Cloneable {
   boolean isLastSession;
 
   public static DecimalFormat getAmountDecimalFormatter() {
-    return new DecimalFormat(Constants.OperationData.DECIMAL_FORMAT);
-  };
+    DecimalFormatSymbols customDFS=new DecimalFormatSymbols();
+    customDFS.setDecimalSeparator('.');
+    customDFS.setGroupingSeparator(',');
+    return new DecimalFormat(Constants.OperationData.DECIMAL_FORMAT, customDFS);
+  }
+
+  public static DecimalFormat getAmountDecimalFormatterNF() {
+    DecimalFormatSymbols customDFS=new DecimalFormatSymbols();
+    customDFS.setDecimalSeparator('.');
+    customDFS.setGroupingSeparator(',');
+    return new DecimalFormat(Constants.OperationData.DECIMAL_FORMAT_NON_FRACTIONAL, customDFS);
+  }
 
   public OperationData() {
     userName = ""; //anonymous

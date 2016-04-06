@@ -1,5 +1,6 @@
 package com.example.ol.currconverter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -32,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
   private DrawerLayout drawerLayout; /// fragment navigation
   private ListView drawerListView; /// fragment navigation
   private ActionBarDrawerToggle drawerToggle; /// actionbar toggle
-  private int curDrawerListPosition = 0; /// fragment item position in the drawer list
+  private int curDrawerListPosition = -1; /// fragment item position in the drawer list
 
   private ActionBar actionBar;
 
@@ -46,9 +48,7 @@ public class MainActivity extends ActionBarActivity {
   private class DrawerItemClickListener implements ListView.OnItemClickListener {
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//Code to run when an item in the navigation drawer gets clicked
       selectItem(position);
-      drawerLayout.closeDrawer(drawerListView);
     }
   }
 
@@ -89,6 +89,11 @@ public class MainActivity extends ActionBarActivity {
   }
 
   private void selectItem(int position) {
+    if (curDrawerListPosition == position) {
+      /// nothing to do
+      drawerLayout.closeDrawer(drawerListView);
+      return;
+    }
     curDrawerListPosition = position;
     Fragment fragment;
     switch (position) {
@@ -147,8 +152,7 @@ public class MainActivity extends ActionBarActivity {
       curDrawerListPosition = savedInstanceState.getInt("position", 0);
       setActionBarTitle(curDrawerListPosition);
     } else {
-      curDrawerListPosition = 0;
-      selectItem(curDrawerListPosition );
+      selectItem(0);
     }
   }
 
@@ -225,6 +229,11 @@ public class MainActivity extends ActionBarActivity {
     // If the nav drawer is open, hide action items related to the content view
     boolean drawerOpen = drawerLayout.isDrawerOpen(drawerListView);
     menu.findItem(R.id.action_about_main).setVisible(!drawerOpen);
+    if (drawerOpen) {
+      /// hide the virtual keyboard
+      ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).
+          hideSoftInputFromWindow(drawerLayout.getWindowToken(), 0);
+    }
     return super.onPrepareOptionsMenu(menu);
   }
 

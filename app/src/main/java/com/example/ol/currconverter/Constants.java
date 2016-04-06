@@ -40,7 +40,8 @@ public final class Constants {
     public static final String TABLE_NAME = "operations";
     public static final String USER_NAME_FIELD_NAME = "userName";
     public static final String DATE_FORMAT = "dd.MM.yyyy HH:mm:ss";
-    public static final String DECIMAL_FORMAT = "###,###,###.##";
+    public static final String DECIMAL_FORMAT = "#,###.##";
+    public static final String DECIMAL_FORMAT_NON_FRACTIONAL = "#,###";
   }
 
   public class Operations {

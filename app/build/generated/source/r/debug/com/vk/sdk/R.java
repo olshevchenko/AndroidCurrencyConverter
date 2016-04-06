@@ -46,24 +46,24 @@ public final class R {
 		public static final int vk_share_send_button_background = 0x7f02015d;
 	}
 	public static final class id {
-		public static final int attachmentLinkLayout = 0x7f0d0077;
-		public static final int captchaAnswer = 0x7f0d006c;
-		public static final int captcha_container = 0x7f0d0069;
-		public static final int copyUrl = 0x7f0d006e;
-		public static final int imageView = 0x7f0d006b;
-		public static final int imagesContainer = 0x7f0d0076;
-		public static final int imagesScrollView = 0x7f0d0075;
-		public static final int linkHost = 0x7f0d0079;
-		public static final int linkTitle = 0x7f0d0078;
-		public static final int postContentLayout = 0x7f0d0073;
-		public static final int postSettingsLayout = 0x7f0d007a;
-		public static final int progress = 0x7f0d006d;
-		public static final int progressBar = 0x7f0d006a;
-		public static final int sendButton = 0x7f0d0072;
-		public static final int sendButtonLayout = 0x7f0d0070;
-		public static final int sendProgress = 0x7f0d0071;
-		public static final int shareText = 0x7f0d0074;
-		public static final int topBarLayout = 0x7f0d006f;
+		public static final int attachmentLinkLayout = 0x7f0d0075;
+		public static final int captchaAnswer = 0x7f0d006a;
+		public static final int captcha_container = 0x7f0d0067;
+		public static final int copyUrl = 0x7f0d006c;
+		public static final int imageView = 0x7f0d0069;
+		public static final int imagesContainer = 0x7f0d0074;
+		public static final int imagesScrollView = 0x7f0d0073;
+		public static final int linkHost = 0x7f0d0077;
+		public static final int linkTitle = 0x7f0d0076;
+		public static final int postContentLayout = 0x7f0d0071;
+		public static final int postSettingsLayout = 0x7f0d0078;
+		public static final int progress = 0x7f0d006b;
+		public static final int progressBar = 0x7f0d0068;
+		public static final int sendButton = 0x7f0d0070;
+		public static final int sendButtonLayout = 0x7f0d006e;
+		public static final int sendProgress = 0x7f0d006f;
+		public static final int shareText = 0x7f0d0072;
+		public static final int topBarLayout = 0x7f0d006d;
 	}
 	public static final class layout {
 		public static final int vk_captcha_dialog = 0x7f03001f;
