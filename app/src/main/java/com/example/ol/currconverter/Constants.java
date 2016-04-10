@@ -11,6 +11,7 @@ public final class Constants {
 
   public class SocAppsIDs {
     public static final String VKAppIdPrefix = "vk.com/id";
+    public static final String VKTokenKey = "VK_ACCESS_TOKEN";
   }
 
 

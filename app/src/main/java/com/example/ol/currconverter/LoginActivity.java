@@ -130,8 +130,13 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     if (SocNetHelper.getHelper().onActivityResult(requestCode, resultCode, data)) {
-      saveUserData(SocNetHelper.getHelper().getUserID());
-      startMain();
+      String userID = SocNetHelper.getHelper().getUserID();
+      if (userID.isEmpty())
+        ; /// try auth. again ...
+      else {
+        saveUserData(userID);
+        startMain();
+      }
     }
     else
       super.onActivityResult(requestCode, resultCode, data);
@@ -141,7 +146,12 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
   public void onClick(View v) {
     switch (v.getId()) {
       case R.id.btVKsignin:
-        SocNetHelper.getHelper().loginVK();
+        if (SocNetHelper.getHelper().loginVK()) {
+          saveUserData(SocNetHelper.getHelper().getUserID());
+          startMain();
+        }
+        else
+          ; /// do nothing - on init error or on waiting for the result of VK login (see onActivityResult())...
         break;
       case R.id.btFBsignin:
         saveUserData("Guest");

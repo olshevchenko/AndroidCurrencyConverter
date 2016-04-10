@@ -99,11 +99,7 @@ public class NumberTextWatcher implements TextWatcher {
         etAmountFrom.setSelection(newlen - 1);
       }
     }
-    catch (NumberFormatException ex) {
-      Log.w(LOG_TAG, "Can't parse number from etAmountFrom", ex);
-      ; ///just ignoring symbol NEWLY added
-    }
-    catch (ParseException ex) {
+    catch (NumberFormatException | ParseException ex) {
       Log.w(LOG_TAG, "Can't parse number from etAmountFrom", ex);
       ; ///just ignoring symbol NEWLY added
     }
