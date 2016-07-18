@@ -9,6 +9,7 @@ import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,7 +23,7 @@ import com.example.ol.currconverter.http.CurrencyLayerAPI;
 import java.util.Locale;
 
 
-public class LoginActivity extends ActionBarActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
   private static boolean isMainActivityStarted = false; //helps to find proper app lifecycle positions during termination
   private TextView tvRegLogin, tvUnregLogin;

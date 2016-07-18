@@ -18,10 +18,6 @@
     <string name="action_settings_login_ru">Russian</string>
 
 <!-- Login activity -->
-
-    <!-- VK APP ID -->
-    <integer name="com_vk_sdk_AppId">5235919</integer>
-
     <string name="regLoginText">Please sign in with the one of your social accounts:</string>
     <string name="unregLoginText">Unregistered login:</string>
 

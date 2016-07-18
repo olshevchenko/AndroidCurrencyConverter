@@ -31,4 +31,3 @@
             app:showAsAction="always"
             android:orderInCategory="3"/>
 </menu>
-<!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/menu/menu_login.xml -->

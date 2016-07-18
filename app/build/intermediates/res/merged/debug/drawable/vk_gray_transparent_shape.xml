@@ -2,4 +2,4 @@
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/vk_black_pressed"/>
-</shape><!-- From: file:/Users/romantruba/Documents/projects/vk-android-sdk/vksdk_library/src/main/res/drawable/vk_gray_transparent_shape.xml --><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/build/intermediates/exploded-aar/com.vk/androidsdk/1.6.6/res/drawable/vk_gray_transparent_shape.xml -->
+</shape><!-- From: file:/Users/romantruba/Documents/projects/vk-android-sdk/vksdk_library/src/main/res/drawable/vk_gray_transparent_shape.xml -->

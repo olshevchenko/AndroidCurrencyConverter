@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VK APP ID -->
+    <integer name="com_vk_sdk_AppId">5235919</integer>
+
+    <!-- operation list item swipe animation -->
+    <integer name="swipeDuration">1000</integer>
+</resources>

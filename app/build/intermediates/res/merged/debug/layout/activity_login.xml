@@ -63,4 +63,4 @@
         android:background="@color/bt_gest_login_background"
         android:text="@string/guestlogin"/>
 
-</LinearLayout><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/layout/activity_login.xml -->
+</LinearLayout>

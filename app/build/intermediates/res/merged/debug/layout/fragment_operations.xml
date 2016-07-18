@@ -36,4 +36,3 @@
         android:drawableRight="@drawable/ic_clear_white_36dp"
         android:id="@+id/btClearAll"/>
 </RelativeLayout>
-<!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/layout/fragment_operations.xml -->

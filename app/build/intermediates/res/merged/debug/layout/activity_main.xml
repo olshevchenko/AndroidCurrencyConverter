@@ -22,4 +22,4 @@
         android:dividerHeight="1dp"
         android:background="@drawable/vertical_cloth_transp50"
     />
-</android.support.v4.widget.DrawerLayout><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/layout/activity_main.xml -->
+</android.support.v4.widget.DrawerLayout>

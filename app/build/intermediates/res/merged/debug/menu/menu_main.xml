@@ -11,4 +11,3 @@
             android:icon="@drawable/ic_cancel_white_36dp"
             app:showAsAction="always"/>
 </menu>
-<!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/menu/menu_main.xml -->

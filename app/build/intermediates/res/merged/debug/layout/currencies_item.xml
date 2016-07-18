@@ -20,4 +20,4 @@
         android:text="(???)"
         android:id="@+id/tvCurrency"/>
 
-</LinearLayout><!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/layout/currencies_item.xml -->
+</LinearLayout>

@@ -23,7 +23,7 @@
         <activity
             android:name="com.example.ol.currconverter.LoginActivity"
             android:configChanges="locale|layoutDirection|keyboard|keyboardHidden"
-            android:label="@string/title_activity_login"
+            android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" >
             <intent-filter>

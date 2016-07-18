@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.ol.currconverter.db.OperationData;
@@ -80,6 +81,18 @@ public class OpListAdapter extends ArrayAdapter<OperationData> {
     holder.tvDateTime.setText(op.getOpFormattedDateTime());
 
     return rowView;
+  }
+
+  public View getViewByPosition(int pos, ListView listView) {
+    final int firstListItemPosition = listView.getFirstVisiblePosition();
+    final int lastListItemPosition = firstListItemPosition + listView.getChildCount() - 1;
+
+    if (pos < firstListItemPosition || pos > lastListItemPosition ) {
+      return getView(pos, null, listView);
+    } else {
+      final int childIndex = pos - firstListItemPosition;
+      return listView.getChildAt(childIndex);
+    }
   }
 }
 

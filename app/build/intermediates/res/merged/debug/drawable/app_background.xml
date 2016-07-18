@@ -3,4 +3,3 @@
         android:src="@drawable/vertical_cloth"
         android:tileMode="repeat">
 </bitmap>
-<!-- From: file:/home/ol/AndroidStudioProjects/AndroidCurrencyConverter/app/src/main/res/drawable/app_background.xml -->

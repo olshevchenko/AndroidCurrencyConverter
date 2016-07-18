@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
@@ -126,9 +128,13 @@ public class OperationsFragment extends Fragment {
       });
     } //else
 
+    ///for swipe animation
+    MyAnimationListener myAnimationListener = new MyAnimationListener();
+
     ///for swipe detection
     @SuppressWarnings("deprecation")
-    final GestureDetector gestureDetector = new GestureDetector(new MyGestureListener(lvUserOpsHistory));
+    final GestureDetector gestureDetector =
+        new GestureDetector(new MyGestureListener(lvUserOpsHistory, opListAdapter, myAnimationListener));
 
     // (re)set OnItemLongClickListener
     if (lvUOHIsOnTouchListenerSet)
@@ -157,7 +163,7 @@ public class OperationsFragment extends Fragment {
     setRetainInstance(true);
   }
 
-  public void getHorizSwipeItem(boolean isRight, int position) {
+  public void getHorizSwipeItem(int position) {
     if ((null == mySession) || (null == opListAdapter) ) {
       Log.w(LOG_TAG, "Undefined UserSession || OpListAdapter - ignoring 'swipe' event...");
       return;
@@ -167,17 +173,49 @@ public class OperationsFragment extends Fragment {
     return;
   }
 
+  class MyAnimationListener implements Animation.AnimationListener {
+    private View mListItem;
+    private int mPosition;
+
+    public void setListItem(View listItem) {
+      this.mListItem = listItem;
+    }
+
+    public void setPosition(int position) {
+      this.mPosition = position;
+    }
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+      mListItem.setEnabled(true);
+      getHorizSwipeItem(mPosition);
+    }
+
+    @Override
+    public void onAnimationRepeat(Animation animation) {
+    }
+  }
+
   class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
     private int temp_position = -1;
-    private ListView list;
+    private ListView mList;
+    private OpListAdapter mOpListAdapter;
+    private MyAnimationListener mAnimationListener;
+    private View mListItem;
 
-    MyGestureListener(ListView list) {
-      this.list = list;
+    MyGestureListener(ListView list, OpListAdapter opListAdapter, MyAnimationListener animationListener) {
+      mList = list;
+      mOpListAdapter = opListAdapter;
+      mAnimationListener = animationListener;
     }
 
     @Override
     public boolean onDown(MotionEvent e) {
-      temp_position = list.pointToPosition((int) e.getX(), (int) e.getY());
+      temp_position = mList.pointToPosition((int) e.getX(), (int) e.getY());
       lvUOHItemPosition = temp_position;
       return super.onDown(e);
     }
@@ -194,7 +232,7 @@ public class OperationsFragment extends Fragment {
         return false;
 
       //get list item number
-      int pos = list.pointToPosition((int) e1.getX(), (int) e2.getY());
+      final int pos = mList.pointToPosition((int) e1.getX(), (int) e2.getY());
 
       if (pos >= 0 && temp_position == pos)
         ; //it's ok with item position search
@@ -203,10 +241,23 @@ public class OperationsFragment extends Fragment {
 
       if (Math.abs(distanceX) > REL_SWIPE_MIN_DISTANCE &&
           Math.abs(velocityX) > REL_SWIPE_MIN_VELOCITY) {
-        if (distanceX > 0)
-          getHorizSwipeItem(true, pos);
-        else
-          getHorizSwipeItem(false, pos);
+        mListItem = mOpListAdapter.getViewByPosition(pos, mList);
+//        mList.setEnabled(false); /// prevent unwanted additional list events
+
+        ///prepare parameters data for animation
+        mAnimationListener.setListItem(mListItem);
+        mAnimationListener.setPosition(pos);
+
+        if (distanceX > 0) {
+          Animation anim = AnimationUtils.loadAnimation(myActivity, R.anim.operations_item_trans_to_right);
+          anim.setAnimationListener(mAnimationListener);
+          mListItem.startAnimation(anim);
+        }
+        else {
+          Animation anim = AnimationUtils.loadAnimation(myActivity, R.anim.operations_item_trans_to_left);
+          anim.setAnimationListener(mAnimationListener);
+          mListItem.startAnimation(anim);
+        }
       }
 
       return false;
